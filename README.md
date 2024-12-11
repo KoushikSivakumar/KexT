@@ -47,3 +47,7 @@ Double-click on `main.bat` to start the program. Alternatively, you can run it t
 ## Disclaimer
 Currently, the script only works with the `files` folder included in the project.
 Users cannot specify their own directory yet, but this feature is something I’m actively working on for future updates.
+
+### Credits
+Sample files used for testing were sourced from [karuncodes/sample-files](https://github.com/karuncodes/sample-files).
+
