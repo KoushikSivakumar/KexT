@@ -24,7 +24,6 @@ for %%f in (*) do (
     )
 )
 
-:: Step 2: Get user input for file extension
 echo.
 set /p extChoice=Enter the file extension you want to explore: 
 
@@ -36,7 +35,6 @@ if not defined chosenExt (
     goto end
 )
 
-:: Step 3: List all files with the chosen extension
 echo.
 echo Files with the extension %chosenExt%:
 set /a fileCount=1
@@ -51,11 +49,9 @@ if !fileCount! EQU 1 (
     goto end
 )
 
-:: Step 4: Get user input for the file to open
 echo.
 set /p fileChoice=Enter the number for the file to open: 
 
-:: Open the selected file
 set "chosenFile="
 for /f "tokens=2 delims==" %%v in ('set file[%fileChoice%] 2^>nul') do set "chosenFile=%%v"
 if not defined chosenFile (
@@ -70,12 +66,12 @@ pause
 :banner
 echo.
 echo.
-echo	 ___  __    _________  _______      ___    ___ _________   
-echo	l\  \l\  \ l\___   ___\\  ___ \    l\  \  /  /l\___   ___\ 
-echo	\ \  \/  /l\l___ \  \_\ \   __/l   \ \  \/  / ll___ \  \_l 
-echo	 \ \   ___  \   \ \  \ \ \  \_l/__  \ \    / /     \ \  \  
-echo	  \ \  \\ \  \   \ \  \ \ \  \_l\ \  /     \/       \ \  \ 
-echo	   \ \__\\ \__\   \ \__\ \ \_______\/  /\   \        \ \__\
-echo	    \l__l \l__l    \l__l  \l_______/__/ /\ __\        \l__l
-echo	                                   l__l/ \l__l                                        
+echo	 ___  __    _______      ___    ___ _________   
+echo	l\  \l\  \  \ \  ___ \    l\  \  /  /l\___   ___\ 
+echo	\ \  \/  /l\ \ \   __/l   \ \  \/  / ll___ \  \_l 
+echo	 \ \   ___  \ \ \  \_l/__  \ \    / /     \ \  \  
+echo	  \ \  \\ \  \ \ \  \_l\ \  /     \/       \ \  \ 
+echo	   \ \__\\ \__\ \ \_______\/  /\   \        \ \__\
+echo	    \l__l \l__l  \l_______/__/ /\ __\         \l__l
+echo	                           l__l/ \l__l                                        
 echo.
