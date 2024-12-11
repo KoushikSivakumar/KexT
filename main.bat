@@ -1,5 +1,5 @@
 @echo off
-title KTexT by Koush
+title KexT by Koush
 
 chcp 65001 >nul
 cd files
